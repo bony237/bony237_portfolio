@@ -1,0 +1,156 @@
+/*
+*   Style guidelines configuration
+*/
+
+.custom-text-black {
+    color: black;
+}
+
+.custom-text-gray {
+    color: #C4C4C4;
+}
+
+.custom-bg-black {
+    background-color: black;
+}
+
+.custom-bg-gray {
+    background-color: #C4C4C4;  
+}
+
+@font-face {
+    font-family: "Roboto Slab-Bold";
+    src: url("../fonts/RobotoSlab-Bold.ttf") format("truetype");
+}
+
+html, body {
+    font-family: "Roboto Slab-Bold";
+}
+
+
+/*media icons size*/
+.media-icon a {
+    width: 2em;
+    height: 2em;
+}
+
+/*footer background*/
+#contact {
+    min-height: 93px;
+    background: url("../images/bg-footer.png") right top/1440px 93px no-repeat border-box, url("../images/bg-footer2.png") right 92px/1440px 100% no-repeat border-box;
+}
+
+/*border debug*/
+.border-debug1 {
+    border: chartreuse dashed 3px;
+}
+
+
+/*logo skill size*/
+.logo-skill {
+    width: 7em;
+    height: 7em;
+}
+
+
+/*about*/
+#about {
+    height: 16rem;
+    background: url("../images/bg-hero.png") center/auto 92% no-repeat content-box, #f5f4f41F;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+    border-top: rgba(0, 0, 0, 0.1) 1px solid;
+    border-bottom: rgba(0, 0, 0, 0.1) 1px solid;
+    display: grid;
+    grid-template-columns: 4fr 3fr 5fr 4fr 8fr;
+    grid-template-rows: 100%;
+    font-size: 300%;
+}
+
+.market-message {
+    transform: rotateY(90deg);
+ 
+}
+
+@media (max-width: 767.98px) {
+    #about {
+        height: 10rem;
+        font-size: 160%;
+    }
+}
+
+svg {
+    transform: rotateY(180deg) rotateZ(-90deg);
+    
+}
+
+circle {
+    fill: none;
+    stroke: black;
+    stroke-width: 4;
+    stroke-dasharray: 337;
+}
+
+
+/*portfolio block*/
+.works-sm,
+#portfolio .works {
+    height: 18em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.works-sm a:first-child,
+#portfolio .works a:first-child {
+    grid-row: 1/3;
+}
+
+@media (max-width: 991.98px) {
+    #portfolio > div:first-child {
+        font-size: 150%!important;
+    }
+
+    @media (max-width: 375px) {
+        #portfolio > div:first-child {
+            font-size: 120%!important;
+        }
+    }
+}
+
+@media (max-width: 575.98px) {
+    .works-sm {
+        height: 25em;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .works-sm a:first-child {
+        grid-row: auto;
+        grid-column: 1/3;
+    }
+}
+
+.farm-rhythm {
+    background: linear-gradient(-45deg, rgba(0, 0, 0, 0.7), rgba(196, 196, 196, 0.7)), url("../images/farm-rhythm.PNG") center right/cover;
+}
+
+.rain-maker {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/rain-maker.PNG") center right/cover;
+}
+
+.designer-portfolio {
+    background: linear-gradient(0deg, rgba(196, 196, 196, 0.7), rgba(196, 196, 196, 0.7)), url("../images/designer-portfolio.PNG") center right/cover;
+}
+
+.learning-app {
+    background: linear-gradient(0deg, rgba(196, 196, 196, 0.7), rgba(196, 196, 196, 0.7)), url("../images/app-learning.png") center right/cover;
+}
+
+.website-perso {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/website.png") center right/cover;
+}
+
+
+.title-website {
+    display: none;
+}
