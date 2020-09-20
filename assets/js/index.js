@@ -18,12 +18,33 @@ anime({
 });
 
 
-anime({
-    targets: 'circle',
-    delay: 200,
-    direction: 'reverse',
-    duration: 2000,
-    stroke: '#C4C4C4',
-    strokeDashoffset: 337,
-    easing: 'linear',
-});
+
+/*on scroll detection*/
+
+var skillPresentation = document.querySelector('circle');
+
+var skillBlock_top = () => skillPresentation.getBoundingClientRect().top;
+var triggerWindowHeight = () => window.innerHeight / 2;
+
+const manageAnimation = () => {
+    if(skillBlock_top() < triggerWindowHeight()) {
+        window.removeEventListener('scroll', manageAnimation);
+        anime({
+            targets: 'circle',
+            delay: 200,
+            direction: 'reverse',
+            duration: 2000,
+            stroke: '#C4C4C4',
+            strokeDashoffset: 337,
+            easing: 'linear',
+        });
+    }
+};
+
+
+//console.log([skillBlock_top(), triggerWindowHeight()])
+
+window.addEventListener('scroll', manageAnimation);
+
+manageAnimation();
+
