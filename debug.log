@@ -1,3 +1,4 @@
 [0915/223726.488:ERROR:process_info.cc(359)] UncheckedAllocate
 [0918/113416.713:ERROR:process_info.cc(359)] UncheckedAllocate
 [0918/120746.089:ERROR:process_info.cc(359)] UncheckedAllocate
+[0922/035743.671:ERROR:process_info.cc(375)] NtQuerySystemInformation SystemExtendedHandleInformation: {Not Enough Quota} Not enough virtual memory or paging file quota is available to complete the specified operation. (0xc0000017)

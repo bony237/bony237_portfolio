@@ -24,11 +24,11 @@ anime({
 var skillPresentation = document.querySelector('circle');
 
 var skillBlock_top = () => skillPresentation.getBoundingClientRect().top;
-var triggerWindowHeight = () => window.innerHeight / 2;
+var triggerWindowHeight = () => window.innerHeight * 0.9;
 
-const manageAnimation = () => {
+const manageAllAnimations = () => {
     if(skillBlock_top() < triggerWindowHeight()) {
-        window.removeEventListener('scroll', manageAnimation);
+        window.removeEventListener('scroll', manageAllAnimations);
         anime({
             targets: 'circle',
             delay: 200,
@@ -41,10 +41,33 @@ const manageAnimation = () => {
     }
 };
 
+function singleAnim (event) {
+    const triggerElm = event.currentTarget;
+    triggerElm.removeEventListener('mouseenter', singleAnim);
+    anime({
+        targets: triggerElm.querySelector('circle'),
+        delay: 200,
+        direction: 'reverse',
+        duration: 2000,
+        stroke: '#C4C4C4',
+        strokeDashoffset: 337,
+        easing: 'linear',
+    });
+    //alert(triggerElm);
+    setTimeout(function(triggerElm) {
+        //triggerElm.addEventListener('mouseenter', singleAnim);
+        alert(triggerElm);
+    }, 3000);
+}
+
 
 //console.log([skillBlock_top(), triggerWindowHeight()])
 
-window.addEventListener('scroll', manageAnimation);
+window.addEventListener('scroll', manageAllAnimations);
 
-manageAnimation();
+manageAllAnimations();
+
+/*document.querySelectorAll('.logo-skill').forEach(skill => {
+    skill.addEventListener('mouseenter', singleAnim);
+});*/
 

@@ -40,6 +40,16 @@ html, body {
     background: url("../images/bg-footer.png") right top/1440px 93px no-repeat border-box, url("../images/bg-footer2.png") right 92px/1440px 100% no-repeat border-box;
 }
 
+#copyright {
+    left: 0;
+    bottom: 15px;
+    font-size: xx-small;
+}
+
+#copyright div {
+    background-color: #242424;
+}
+
 /*border debug*/
 .border-debug1 {
     border: chartreuse dashed 3px;
